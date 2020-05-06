@@ -35,9 +35,20 @@ $(document).ready(function() {
         })
         
     };
+    function findGrocery(){
+    var apiKey = "pk.eyJ1Ijoic2hrZTA4MTkiLCJhIjoiY2s5dW9icXpqMDN6MjNucGVqY3dkYXhtcSJ9.XcBVX3QPyZsx5WuBzwI8_g"
+    var queryURL ="https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=" + apiKey
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response){
+            console.log(response)
+
+        })
 
 
 
-
+    }
+    findGrocery()
 
     })
