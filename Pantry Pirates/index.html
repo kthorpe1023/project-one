@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,15 +19,15 @@
       <div class="nav-wrapper">
         <a href="" class="brand-logo">PanPt</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Featured</a></li>
-          <li><a href="badges.html">Share</a></li>
+          
           <li><a href="collapsible.html">Recipes</a></li>
         </ul>
       </div>
     </nav>
     </div>
 <!--Start of container-->
-    <div class="container">
+    <div class="container" style="padding-left: -200px;
+    padding-right: -200px;">
       <div class="title">
         <div class="container">
           <h1 class="display-4">Pantry Pirates</h1>
@@ -42,8 +43,9 @@
           >
 
           <!--Card Title-->
-            <div class="card-content white-text">
-              <span class="card-title" style="text-align: center; color: black;"
+            <div class="card-content white-text" style="padding-left: 50px;
+            padding-right: 50px;">
+              <span class="card-title" style="text-align: center; color: black;font-style: oblique;font-weight: bold;"
                 >Welcome to the pantry!!
               </span>
 
@@ -52,16 +54,18 @@
 
 
               <div class="row">
-                <div class="col s12 m4">
+                <div class="col s12 m12 l6">
                   <img
+
                     src="images/cook.jpg"
                     alt="cook"
                     style="
-                      max-width: 250px;
-                      max-height: 250px;
+                      max-width: 280px;
+                      max-height: 280px;
                       border-radius: 5px;
-                    "
-                  />
+                      margin-left: auto;
+                      margin-right: auto;
+                      display: block;"/>
 
                   <p style="color: black;">
                     If you wanna cook with what you've got in your
@@ -70,60 +74,43 @@
                   </p>
 
                   <!--Ingredients search button-->
+                 
+
+                  
 
                   <input id="searchOne" type="search" required />
                   <!--ID for the button-->
-                      <a id="search-ngredient" class="waves-effect waves-light btn">Search</a>
+                      <a id="search-ingredient" class="waves-effect waves-light btn">Search</a>
                       <label id=""for="search"
                     >Ingredients<i class="material-icons">
+                       
+
+
+                      
                     
                   
                 </div>
 
                 <!--Second Colum, Recepie -->
 
-                <div class="col s12 m4">
-                  <img
-                    src="images/recepie.jpg"
-                    alt="cook"
-                    style="
-                      max-width: 250px;
-                      max-height: 250px;
-                      border-radius: 5px;
-                    "
-                  />
-
-                  <p style="color: black;">
-                    If you would like to search for a specific recipe use the
-                    search bar.
-                  </p>
-
-                  <!--Recipe search button-->
-
-                  <input id="searchTwo" type="search" required />
-                  <!--ID for button-->
-                      <a id="search-recipe"class="waves-effect waves-light btn">Search</a>
-
-                      <label for="search">
-                    Recipe
-                    <i class="material-icons">
-                   
-                </div>
+                
 
                 <!--Third colum, Substitute-->
 
-                <div class="col s12 m4">
+                <div class="col s12 m12 l6">
                   <img
                     src="images/subs.jpg"
                     alt="cook"
                     style="
-                      max-width: 250px;
-                      max-height: 250px;
+                      max-width: 269px;
+                      max-height: 269px;
                       border-radius: 5px;
-                    "
-                  />
+                      margin-left: auto;
+                      margin-right: auto;
+                      display: block;"
+                      />
 
-                  <p style="color: black;">
+                  <p style="color: black; ">
                     If you would like to find a substitute for an ingredient,
                     use this.
                   </p>
@@ -132,10 +119,20 @@
                   <!--Substitute search button-->
 
                   <input id="searchThree" type="search" required />
-                  <!--ID for button-->
-                      <a id="search-sub"class="waves-effect waves-light btn">Search</a>
-                      <label for="search">
-                        Substitute<i class="material-icons">
+                  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Search</a>
+                  <label id=""for="search"
+                    >Substitute<i class="material-icons">
+                  <!-- Modal Structure -->
+                  <div id="modal1" class="modal">
+                    <div class="modal-content" style="color:black">
+                        <!-- push header and recipe here -->
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="close">OK</a>
+                    </div>
+                  </div>
+
+
                     
                 </div>
               </div>
@@ -145,22 +142,18 @@
         </div>
       </div>
 
-      <!--Recepies row, where the output of the API will be displayed-->
-
-      <div class="row">
-        <div class="col s12 m8">
+      <!--Recipes row, where the output of the API will be displayed-->
+<div class="row">
+        <div class="col s12 m7">
           <div
-            id="recepies"
+            id="recipes"
             class="card white-text darken-1"
-            style="border-radius: 10px;"
-          >
+            style="border-radius: 10px;">
             <div class="card-content white-text">
-              <span class="card-title" style="color: black;">Recepies</span>
-              <p style="color: black;">
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
+              <span class="card-title" style="color: black;">Recipes</span>
+              <div id="recipe-output" style="color: black;">
+                
+              </div>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
@@ -172,18 +165,15 @@
 
         <!--Feed row where the uot put of another API will be displayed-->
 
-        <div class="col s12 m4">
+        <div class="col s12 m5">
           <div
             id="feed"
             class="card white-text darken-1"
-            style="border-radius: 10px;"
-          >
+            style="border-radius: 10px;">
             <div class="card-content white-text">
               <span class="card-title" style="color: black;">Feed</span>
               <p style="color: black;">
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
+                
               </p>
             </div>
             <div class="card-action">
@@ -193,15 +183,42 @@
           </div>
         </div>
       </div>
+      
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer class="page-footer">
-      <div class="footer-copyright">
+      
         <div class="container">
           © 2020 Copyright Text
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
-      </div>
+      
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="script.js"></script>
+
+   
+
+
+
+
+
+
   </body>
 </html>

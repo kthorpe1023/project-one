@@ -38,25 +38,29 @@ h1 {
 }
 
 #instructions {
-    margin-left: 45px;
-    margin-right: 45px;
+    margin-left: 0px;
+    margin-right: 0px;
     top: 0px;
     
     opacity: 90%;
     
 }
 
-p {
-    float: right;
-}
 
 #recepies {
-    margin-left: 45px;
+    
     opacity: 90%;
 }
 
 
 #feed {
-    margin-right: 45px;
+   
     opacity: 90%;
+}
+
+img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
