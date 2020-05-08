@@ -53,3 +53,12 @@ img {
   margin-right: 10px;
   border-radius: 5px;
 }
+#map{
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%;
+}
+.size{
+    height: 250px;
+}
