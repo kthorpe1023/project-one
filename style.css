@@ -53,3 +53,8 @@ img {
   margin-right: 10px;
   border-radius: 5px;
 }
+
+#map {
+  height: 350px;
+  width: 340px;
+}
